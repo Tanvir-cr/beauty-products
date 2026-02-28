@@ -413,8 +413,132 @@ footer {
     gap: 15px;
     font-size: 1.8rem;
 }
+/* Contact Section */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contact-form h3, .contact-info h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--sans);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info i {
+    color: var(--gold);
+}
+
+.social-icons-contact {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons-contact a {
+    font-size: 1.5rem;
+    color: var(--dark);
+    transition: color 0.3s;
+}
+
+.social-icons-contact a:hover {
+    color: var(--gold);
+}
 
 
+/* FAQ Section */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.faq-question h4 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 0 20px;
+    line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed */
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+/* Shipping, Privacy & Terms Sections */
+#shipping h3, #privacy h3, #terms h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+#shipping p, #privacy p, #terms p {
+    margin-bottom: 15px;
+    max-width: 800px;
+}
+
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
 @media (max-width: 768px) {
     .categories { grid-template-columns: 1fr; margin-top: 0; }
     .nav-links { display: none; }
