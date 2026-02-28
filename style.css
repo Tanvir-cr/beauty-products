@@ -59,6 +59,23 @@ body {
     letter-spacing: 4px;
 }
 
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.cart-icon {
+    margin: -4px 0 0 0;
+}
+
+.nav-toggle {
+    display: none;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
